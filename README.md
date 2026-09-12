@@ -2,6 +2,8 @@
 
 为 Unity / C# 开发者制作的 Windows AI 场景翻译助手。输入中文意图，得到适合代码的名称；也可以翻译中英文和开发文档。
 
+**[下载 Windows x64 最新版本](https://github.com/CyreneMine/UnityLingo/releases/latest)** · 在 Assets 中选择 `UnityLingo-win-x64.zip`。
+
 ## 快速开始
 
 1. 解压 Windows x64 发布包，运行 `UnityLingo.exe`，保留同目录所有依赖文件。无需另外安装 .NET。
@@ -64,7 +66,9 @@ dotnet run --project src/UnityLingo -c Release --no-build
 powershell -ExecutionPolicy Bypass -File scripts/publish.ps1
 ```
 
-输出 `artifacts/UnityLingo-win-x64` 和 `artifacts/UnityLingo-win-x64.zip`。发布包未做代码签名，暂无自动更新。
+每次使用新的 `artifacts/publish/<随机目录>` 构建，输出 `artifacts/UnityLingo-win-x64.zip` 和 `artifacts/SHA256SUMS.txt`，不会将旧发布目录中的用户文件打包。发布包未做代码签名，暂无自动更新。
+
+推送 `v*` 版本标签时，GitHub Actions 会从干净检出构建、运行离线检查并发布 ZIP 与校验值至 GitHub Releases；无需上传个人 API Key 或配置。
 
 项目结构和验证细节见 [开发说明](docs/DEVELOPMENT.md)。配置示例见 [模型配置示例](docs/model-profile.example.json)。
 
