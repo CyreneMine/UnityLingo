@@ -1,0 +1,6 @@
+{
+  "name": "我的模型",
+  "baseUrl": "https://api.example.com/v1",
+  "modelId": "your-model-id",
+  "apiKey": "FILL_IN_THE_APP_ONLY"
+}

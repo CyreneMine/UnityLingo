@@ -1,0 +1,16 @@
+**/bin/
+**/obj/
+.vs/
+.idea/
+.build/
+artifacts/
+*.user
+*.suo
+*.db
+*.db-*
+*.log
+appsettings.local.json
+settings.json
+.env
+.env.*
+!.env.example
